@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Ride the Lighting (fast websites)</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+<!-- 		<link rel="stylesheet" href="css/theme/night.css" id="theme"> -->
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/atomDark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+    <style>
+      twitterwidget.twitter-tweet.twitter-tweet-rendered {
+        margin: 10px auto;
+      }
+      .reveal sup {
+        font-size: .5em;
+      }
+    </style>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+        <section data-background="#0e202c">
+          <img  class="stretch" src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FlightningSlide%20%5BRecovered%5D.jpg?1502742115109" alt="" style="border: none;"/>
+        </section>
+				<section>
+					<h1>Hi there.</h1>
+					<h3>My name is Matt James</h3>
+					<p>
+						<small><a href="http://mattjamesmedia.com">Matt James</a> / <a href="http://twitter.com/hakimel">@mattFrankJames</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>I build websites</h2>
+          <img src="https://www.eblencharities.org/wp-content/uploads/2013/01/WellsFargoAdvisors.jpg" style="width: 60%; margin: 0 auto;">
+					
+				</section>
+        <section>
+					<h2>... and teach</h2>
+          <img src="http://www.stlcc.edu/Media_Library/graphics_and_logos/Forest%20Park%20BW%20Reg.jpg" style="width: 60%; margin: 0 auto;">
+					
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section data-background="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2Fexplosion-animated-gif-1.gif?1502742887558">
+          <h2>
+             Let's Talk about Performance!!
+          </h2>
+
+				</section>
+
+				<section>
+					<h2>Average Web Page Size</h2>
+					<p>
+            The average size of a web page has more than tripled over the last seven years.<sup>*</sup>
+					</p>
+          
+          <ul>
+            <li>2010 - 702kb</li>
+            <li>2012 - 1097kb</li>
+            <li>2014 - 1850kb</li>
+            <li>2016 - 2332kb</li>
+            <li>2017 - 3061kb</li>
+          </ul>
+          <small style="display: block">*source: <a href="httparchive.org">httparchive.org</a></small>
+				</section>
+
+				<section>
+					<h2>What the hell is in there!?</h2>
+					<img src="http://chart.googleapis.com/chart?chs=400x225&cht=p&chco=007099&chd=t:1731,27,60,350,98,726,14&chds=0,1731&chdlp=b&chdl=total%203061%20kB&chl=Images+-+1731+kB%7CHTML+-+27+kB%7CStylesheets+-+60+kB%7CScripts+-+350+kB%7CFonts+-+98+kB%7CVideo+-+726+kB%7COther+-+14+kB&chma=|5&chtt=Average+Bytes+per+Page+by+Content+Type">
+				</section>
+
+				<section>
+					<h2>Mobile first ➡ Mobile only</h2>
+					<p>
+						From 2013 to 2015, the percentage of people forgoing a broadband connection and relying solely on mobile doubled across all incomes.
+					</p>
+          <a href="http://www.pewinternet.org/2015/12/21/home-broadband-2015/pi-2015-10-21_broadband2015-00/"><img width="420" height="415" src="http://assets.pewresearch.org/wp-content/uploads/sites/14/2015/12/PI-2015-10-21_broadband2015-00.png" class="attachment-large size-large" alt="" /></a>
+				</section>
+
+				<section>
+					<h2>
+            But doesn't everyone have 4G these days?
+          </h2>
+          <h3>
+            Well...
+          </h3>
+				</section>
+
+				<section>
+					<h2>
+            Coverage is sparse for most of the world
+          </h2>
+<!--           <img src="https://cdn.theatlantic.com/assets/media/img/posts/2016/08/mobile_network_map/db737e58c.png"> -->
+          <img src="https://cdn3.vox-cdn.com/thumbor/xSQqAs8iZCRWj6oiWPgCdqe-K4s=/1800x0/cdn1.vox-cdn.com/uploads/chorus_asset/file/6820785/vrg_1143_facebook_connectivity_slide.0.jpg" style="width: 80%; margin: 0; border: 1px solid #eee;">
+          <p>
+            Including at..
+          </p>
+				</section>
+
+				<section>
+          <h2>
+            My house
+          </h2>
+          <img src="https://maps.googleapis.com/maps/api/streetview?channel=ldp-publicrecord&location=443+Oak+St%2C+Webster+Groves%2C+MO+63119&size=665x441&client=gme-redfin&signature=X4XOFFj_dnVRiNuMAp0J2i65KaY=">
+
+				</section>
+        <section>
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I remember when 3G was primary mobile speed. It was slow but still worked, so why now when my phone says 3G it becomes completely useless.</p>&mdash; Stephen Gundee (@StephenGundee) <a href="https://twitter.com/StephenGundee/status/712650972133138433">March 23, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!--           <img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-08-18%20at%203.01.06%20PM.png?1503086490864"> -->
+        </section>
+				<section>
+          <h2>
+             A fantastic resource
+          </h2>
+					<a href="https://whatdoesmysitecost.com/" data-preview-link>What does my site cost?</a>
+				</section>
+
+				<section data-background="https://media.giphy.com/media/bZp3Ak3yxEyxG/giphy.gif">
+					<h2 style="text-shadow: 0px 6px 20px black;">
+            So, what are we going to do?!
+          </h2>
+				</section>
+
+				<section>
+					<h2>Let start at the top with Images</h2>
+					<p>
+						Averaging 1731kb per page, images make up 56.5% of web bloat
+					</p>
+					
+				</section>
+        <section data-background="https://media.giphy.com/media/qmcZymbr1WNeU/giphy.gif">
+          <h2 style="text-shadow: 0px 6px 20px black;">
+            Let's squeeze 'em down!
+          </h2>
+        </section>
+        <section>
+          <h2>
+            Do you even need that on every device?
+          </h2>
+        </section>
+				<section>
+					<h2>Create and Lazy Load the Image</h2>
+          
+					<pre><code class="hljs" data-trim contenteditable>
+function insertImg() {
+
+	const bannerImg = document.querySelectorAll('.heroImg');
+	if (window.innerWidth >= 750 && (bannerImg.length > 0) && heroFlag === false) {
+		const imgPath = bannerImg[0].dataset.src;
+		const hero = document.createElement('img');
+		hero.src = `${imgPath}.jpg`;
+		hero.srcset = `${imgPath}@2x.jpg 1.5x,  ${imgPath}@3x.jpg 2x`;
+		hero.alt = ' ';
+		bannerImg[0].appendChild(hero);
+		heroFlag = true;
+	}
+}
+					</code></pre>
+				
+				</section>
+
+				<section data-background="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2Ftools.svg?1504126501214">
+					<h2>
+            Generate your image sizes with tools!
+          </h2>
+				</section>
+<!--           <img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2Fexplosion-animated-gif-1.gif?1502742887558" style="border: none;">  -->
+        <section>
+					<section>
+						<h2>Use a GUI</h2>
+						<img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-08-18%20at%203.57.21%20PM.png?1504126611421">
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+						<img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-08-30%20at%203.58.23%20PM.png?1504126768977">
+					</section>
+					<section>
+						<img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-08-30%20at%203.58.02%20PM.png?1504126764114">
+					</section>
+          <section>
+            <img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-08-30%20at%204.04.23%20PM.png?1504127084533">
+          </section>
+        </section>
+        <section>
+        <h2>
+          Or write some code..
+          </h2>
+          <img src="http://www.themightycribb.com/wp-content/uploads/2016/08/gulpjs-logo.jpg" style="width: 40%">
+        </section>
+        
+				<section>
+          <h2>
+             Gulp Imagemin
+          </h2>
+					<pre>
+          <code class="hljs" data-trim contenteditable>
+          const gulp = require('gulp');
+const imagemin = require('gulp-imagemin');
+ 
+gulp.task('images', () =>
+    gulp.src('src/images/*')
+        .pipe(imagemin([
+          imagemin.gifsicle({interlaced: true}),
+          imagemin.jpegtran({progressive: true}),
+          imagemin.optipng({optimizationLevel: 5}),
+          imagemin.svgo({plugins: [{removeViewBox: true}]})
+        ]))
+        .pipe(gulp.dest('dist/images'))
+);
+          </code>
+          </pre>
+				</section>
+
+				<section>
+        <h2>
+          If you want to take it to the next level..
+          </h2>
+				</section>
+
+				<section>
+					<h2>Generate all the sizes</h2>
+					<pre>
+          <code class="hljs" data-trim contenteditable>
+          const gulp = require('gulp');
+const responsive = require('gulp-responsive');
+
+gulp.task('images', () => {
+  return gulp.src('src/*.{jpg,png}')
+    .pipe(responsive({
+      // Resize all JPG images to three different sizes: 200, 500, and 630 pixels
+      '*.jpg': [{
+        width: 200,
+        rename: { suffix: '-200px' },
+      }, {
+        width: 500,
+        rename: { suffix: '-500px' },
+      }, {
+        width: 630,
+        rename: { suffix: '-630px' },
+      }, {
+        // Compress, strip metadata, and rename original image
+        rename: { suffix: '-original' },
+      }]
+    }, {
+      // Global configuration for all images
+      // The output quality for JPEG, WebP and TIFF output formats
+      quality: 70,
+      // Use progressive (interlace) scan for JPEG and PNG output
+      progressive: true,
+      // Strip all metadata
+      withMetadata: false,
+    }))
+    .pipe(gulp.dest('dist'));
+});
+          </code>
+          </pre>
+				</section>
+
+				<section>
+					<h2>Responsive Images!</h2>
+					<p>
+						Drop those bad boys in the <code>srcset</code> atttribute and let the browser decide!
+					</p>
+          <pre>
+            <code class="hljs" data-trim contenteditable>
+              <img src="small.jpg"
+     srcset="large.jpg 1024w, medium.jpg 640w, small.jpg 320w"
+     sizes="100vw"
+     alt="Whatever you need" />
+            </code>
+          </pre>
+				</section>
+
+				<section>
+					<h2>Next up - Fonts</h2>
+					<p>While they aren't a huge slice of the pie, web fonts can have a massive impact on UX</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section>
+					<h2>FOIT</h2>
+					<p>By default <code>@font-face</code> has a flash of invisible text of 3 seconds. Older -webkit- browsers have unlimited FOIT. So, if your font doesn't load, your users get nothing. </p>
+<!-- 					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> -->
+				</section>
+
+				<section>
+					<h2>Embrace the FOUT!!</h2>
+					<p>
+						With a flash of unstyled text, users get content immediately and your custom fonts swap in when available. 
+					</p>
+				</section>
+        
+        <section>
+          <h3>
+            The basics..
+          </h3>
+        <h2>
+          Use the new <code>font-display</code> property in your <code>@font-face</code> block.
+          </h2>
+          <p>
+            The values <code>block</code>, <code>swap</code>, <code>fallback</code> and <code>optional</code> tell the browser what to do while the web font downloads.
+          </p>
+        </section>
+        
+        <section>
+          <h2>
+            While Browser support's currently not great
+          </h2>
+          <img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-07%20at%2012.48.41%20PM.png?1504806603518" style="width: 65%;">
+        </section>
+        <section>
+          <h2>
+            It's Progressive Enhancement<sup>tm</sup>!
+            <!--put some kind of magic gif in here-->
+          </h2>
+        </section>
+				<section>
+          <h3>
+            A more robust approach...
+          </h3>
+					<h2>Font Face Observer</h2>
+					<p>
+						A sweet polyfill for the CSS Font Loading API from Bram Stein, available via NPM.
+					</p>
+					<pre><code class="hljs" data-trim contenteditable>
+const fontA = new FontFaceObserver('Lato');
+const fontB = new FontFaceObserver('Montserrat);
+
+Promise.all([fontA.load(), fontB.load()]).then(() => {
+  document.documentElement.className += " fonts-loaded";
+});
+					</code></pre>
+          <pre>
+            <code>
+.fonts-loaded body {
+  font-family: 'Lato', sans-serif;
+}
+.fonts-loaded h1 {
+  font-family: 'Montserrat', serif;
+}
+            </code>
+          </pre>
+				</section>
+
+				<section>
+					<h2>Buy that guy's book</h2>
+					<img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-07%20at%2012.34.33%20PM.png?1504806041633">
+				</section>
+
+				<section>
+					<h3>And while you're at it</h3>
+					<h2>
+            Follow this guy 
+          </h2><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">★ A Comprehensive Guide to Font Loading Strategies <a href="https://t.co/5LI0HZINku">https://t.co/5LI0HZINku</a></p>&mdash; Zach Leatherman (@zachleat) <a href="https://twitter.com/zachleat/status/753220402134999042">July 13, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</section>
+        
+        <section>
+        <h2>
+          All right, let's talk about CSS and JS
+          </h2>
+          <p>
+            and how we should handle these render blocking resources
+          </p>
+        </section>
+        
+        <section id="fragments">
+          <!--add a gif of low hanging fruit-->
+        
+<!--           <section> -->
+						<h2>
+          The low hanging fruit 
+          </h2>
+						
+						<p class="fragment fade-right"><code>async</code> and <code>defer</code> your JS file</p>
+						<p class="fragment fade-left">Add <code>link rel="preload"</code> to your CSS</p>
+            <p class="fragment fade-right">
+              Minify and concatenate your scripts and stylesheets
+          </p>
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+<!-- 					</section> -->
+<!-- 					<section>
+						<h2>Fragment Styles</h2>
+						<p>There's different types of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p class="fragment fade-up">fade-up (also down, left and right!)</p>
+						<p class="fragment current-visible">current-visible</p>
+						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
+					</section> -->
+        </section>
+        <section>
+          <section>
+						<h2>GUIs back to the rescue</h2>
+						
+						
+					</section>
+					<section>
+						<img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-08-30%20at%203.58.23%20PM.png?1504126768977">
+					</section>
+					<section>
+						<img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-08-30%20at%203.58.02%20PM.png?1504126764114">
+					</section>
+          
+        </section>
+        
+        <section>
+          
+          <section>
+          <h2>
+           Minify and concatenate all the things!
+          </h2>
+            <h3>
+              This Gulp task
+            </h3>
+            <pre>
+            <code class="hljs">
+const gulp = require('gulp'),
+    useref = require('gulp-useref'),
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
+    cssnano = require('gulp-cssnano');
+ 
+gulp.task('compress', () => 
+    gulp.src('app/*.html')
+        .pipe(useref())
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', cssnano()))
+        .pipe(gulp.dest('dist'))
+);
+            </code>
+          </pre>
+          </section>
+          <section>
+            <h3>
+              will turn this:
+            </h3>
+          <pre>
+          <code class="hljs">
+
+    <!-- build:css css/combined.css -->
+    <link href="css/one.css" rel="stylesheet">
+    <link href="css/two.css" rel="stylesheet">
+    <!-- endbuild -->
+
+<body>
+    <!-- build:js scripts/combined.js -->
+    <script type="text/javascript" src="scripts/one.js"></script> 
+    <script type="text/javascript" src="scripts/two.js"></script> 
+    <!-- endbuild -->
+</body>
+
+          </code>
+          </pre>
+          </section>
+          <section>
+            <h3>
+              Into this:
+            </h3>
+          <pre>
+          <code class="hljs">
+
+
+    <link rel="stylesheet" href="css/combined.css"/>
+
+<body>
+    <script src="scripts/combined.js"></script> 
+</body>
+
+          </code>
+          </pre>
+          </section>
+          
+ 
+        </section>
+        <section>
+        <h2>
+          Great, now let's take render blocking CSS out of the equation entirely
+          </h2>
+        </section>
+        <section>
+        <h2>
+          Remeber the fold?
+          </h2>
+          <img alt="" src="http://cdn4.tricksmachine.com/wp-content/uploads/2013/02/Website-Design-above-the-fold.jpg">
+        </section>
+        <section>
+        <h2>
+          Time for Critical CSS
+          </h2>
+          <p>
+            by isolating CSS for above the fold content and inlining it, we dramatically improve perceived performance
+          </p>
+        </section>
+        <section>
+        <!--GUI or online Critical Generators-->
+        </section>
+        <section>
+        <h2>
+          There's a Gulp task for that.
+          </h2>
+          <pre>
+          <code class="hljs">
+const critical = require('critical');
+
+  gulp.task('critical', ['build'], function (cb) {
+    critical.generate({
+        inline: true,
+        base: 'dist/',
+        src: 'index.html',
+        dest: 'dist/index-critical.html',
+        minify: true,
+        width: 320,
+        height: 480
+    });
+});
+          </code>
+          </pre>
+        </section>
+        <section>
+        <h2>
+          Now asynchronously load non-critical CSS
+          </h2>
+          <p>
+            Use <code>link rel="preload"</code> in conjunction with this polyfill
+          </p>
+          <img alt="" src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-08%20at%203.12.15%20PM.png?1504901601689">
+        </section>
+        <section>
+        <h2>
+          OK, now that we have everything nice and optimized
+          </h2>
+          <p>
+            What if we were able to minimize almost all network requests after the first visit?
+          </p>
+        </section>
+        <section data-background="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2Ffireworks-animation-46.gif?1504902282927">
+        <h2 style="text-shadow: 0px 6px 50px black;">
+          Enter the Service Worker!!
+          </h2>
+        </section>
+        <section>
+        <h2>
+          So, how does a Service Worker work?
+          </h2>
+          <img alt="" src="https://codelabs.developers.google.com/codelabs/polymer-offline-weather/img/1fbdd59d923c44cb.png">
+        </section>
+				<section style="text-align: left;">
+					<h1>THANK YOU</h1>
+					<p>
+						- <a href="http://slides.com">Try the online editor</a> <br>
+						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+        multiplex: {
+          // Example values. To generate your own, go to https://tin-princess.glitch.me/token
+          secret: null, // null so the clients do not have control of the master presentation
+          id: '22be2b393ec5cfd9', // id, obtained from socket.io server
+          url: 'https://tin-princess.glitch.me' // Location of socket.io server
+        },
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+          { src: 'plugin/multiplex/client.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

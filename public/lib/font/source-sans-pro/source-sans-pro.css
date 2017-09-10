@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-regular.eot');
+    src: url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-regular.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-regular.woff') format('woff'),
+         url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-italic.eot');
+    src: url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-italic.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-italic.woff') format('woff'),
+         url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-semibold.eot');
+    src: url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-semibold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-semibold.woff') format('woff'),
+         url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-semibolditalic.eot');
+    src: url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-semibolditalic.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-semibolditalic.woff') format('woff'),
+         url('https://cdn.hyperdev.com/us-east-1%3Aedd318f8-328d-4a7d-bb2d-89e041c4feeb%2Fsource-sans-pro-semibolditalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
