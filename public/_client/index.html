@@ -1,4 +1,4 @@
-<!doctype html>
+f<!doctype html>
 <html lang="en">
 
 	<head>
@@ -578,12 +578,143 @@ const critical = require('critical');
           Enter the Service Worker!!
           </h2>
         </section>
-        <section>
+       <section>
         <h2>
           So, how does a Service Worker work?
           </h2>
-          <img alt="" src="https://codelabs.developers.google.com/codelabs/polymer-offline-weather/img/1fbdd59d923c44cb.png">
+                  <img alt="" src="https://codelabs.developers.google.com/codelabs/polymer-offline-weather/img/1fbdd59d923c44cb.png">
         </section>
+        <section>
+          <h2>
+          Service Workers are magic!
+        </h2>
+          <h3>
+            You control:
+          </h3>
+          <p class="fragment fade-right">Which assets to cache (static, dynamic, etc)</p>
+						<p class="fragment fade-left">How to handle page requests</p>
+            <p class="fragment fade-right">
+              The offline experience
+          </p>
+        </section>
+        <section>
+        <h2>
+          And, it's more progressive enhancement<sup>tm</sup>!
+          </h2>
+          <pre>
+          <code class="hljs">
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register('./serviceworker.js');
+}
+          </code>
+          </pre>
+        </section>
+        <section>
+        <h2>
+          You could write it from scratch:
+          </h2>
+          <pre>
+          <code class="hljs">
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+    .then(response => response || fetch(event.request))
+  );
+});
+
+const assets = [
+  // put your static assets here
+];
+
+self.addEventListener('install', (event) => {
+  self.skipWaiting();
+  event.waitUntil(
+    caches.open('static-v6')
+    .then(cache => cache.addAll(assets))
+  );
+});
+
+const expectedCaches = [
+  'static-v6',
+];
+
+self.addEventListener('activate', (event) => {
+  self.clients.claim();
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (!expectedCaches.includes(cacheName)) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+          </code>
+          </pre>
+        </section>
+        <section>
+        <h2>
+          Or use a tool:
+          </h2>
+          <img style="width: 60%;" alt="" src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-11%20at%203.33.02%20PM.png?1505162899401">
+        </section>
+        <section> <!--maybe add a flame gif-->
+        <h2>
+          However you do it, do it.
+          </h2>
+          <table style="color: inherit">
+            <tr>
+              <th></th>
+            <th scope="col">Before</th>
+              <th scope="col">After</th>
+            </tr>
+            <tr>
+            <th scope="row">Cable</th>
+              <td>4.2 sec</td>
+              <td>3.4 sec</td>
+            </tr>
+            <tr>
+            <th scope="row">3G</th>
+              <td>10.5 sec</td>
+              <td>6.4 sec</td>
+            </tr>
+            <tr>
+            <th scope="row">2G</th>
+              <td>31.91 sec</td>
+              <td>14.63 sec</td>
+            </tr>
+          </table>
+        </section>
+       <section>
+        <h2>
+          Now that you've done all this work, let's do some testing!
+         </h2>
+        </section>
+        <section>
+        <h2>
+          The gold standard
+          </h2>
+          <img alt="" src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-11%20at%203.36.45%20PM.png?1505162899451">
+        </section>
+        
+        <section>
+        <section>
+          <h2>
+            Dig into that trace!
+          </h2>
+          <img alt="" src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-11%20at%204.16.53%20PM.png?1505164821710">
+          </section>
+          <section>
+          <h2>
+            Then keep digging...
+            </h2>
+            <img alt="" src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-11%20at%204.19.01%20PM.png?1505164821765">
+          </section>
+        </section>
+
 				<section style="text-align: left;">
 					<h1>THANK YOU</h1>
 					<p>
