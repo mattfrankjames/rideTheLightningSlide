@@ -101,7 +101,7 @@ f<!doctype html>
 				<section>
 					<h2>Mobile first ➡ Mobile only</h2>
 					<p>
-						From 2013 to 2015, the percentage of people forgoing a broadband connection and relying solely on mobile doubled across all incomes.
+						From 2013 to 2015, the percentage of people forgoing broadband and relying solely on mobile nearly doubled across all incomes.
 					</p>
           <a href="http://www.pewinternet.org/2015/12/21/home-broadband-2015/pi-2015-10-21_broadband2015-00/"><img width="420" height="415" src="http://assets.pewresearch.org/wp-content/uploads/sites/14/2015/12/PI-2015-10-21_broadband2015-00.png" class="attachment-large size-large" alt="" /></a>
 				</section>
@@ -138,12 +138,7 @@ f<!doctype html>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <!--           <img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-08-18%20at%203.01.06%20PM.png?1503086490864"> -->
         </section>
-				<section>
-          <h2>
-             A fantastic resource
-          </h2>
-					<a href="https://whatdoesmysitecost.com/" data-preview-link>What does my site cost?</a>
-				</section>
+			
 
 				<section data-background="https://media.giphy.com/media/bZp3Ak3yxEyxG/giphy.gif">
 					<h2 style="text-shadow: 0px 6px 20px black;">
@@ -173,17 +168,16 @@ f<!doctype html>
           
 					<pre><code class="hljs" data-trim contenteditable>
 function insertImg() {
-
-	const bannerImg = document.querySelectorAll('.heroImg');
-	if (window.innerWidth >= 750 && (bannerImg.length > 0) && heroFlag === false) {
-		const imgPath = bannerImg[0].dataset.src;
-		const hero = document.createElement('img');
-		hero.src = `${imgPath}.jpg`;
-		hero.srcset = `${imgPath}@2x.jpg 1.5x,  ${imgPath}@3x.jpg 2x`;
-		hero.alt = ' ';
-		bannerImg[0].appendChild(hero);
-		heroFlag = true;
-	}
+  const bannerImg = document.querySelectorAll('.heroImg');
+  if (window.innerWidth >= 750 && (bannerImg.length > 0) && heroFlag === false) {
+	  const imgPath = bannerImg[0].dataset.src;
+	  const hero = document.createElement('img');
+	  hero.src = `${imgPath}.jpg`;
+	  hero.srcset = `${imgPath}@2x.jpg 1.5x,  ${imgPath}@3x.jpg 2x`;
+	  hero.alt = ' ';
+	  bannerImg[0].appendChild(hero);
+	  heroFlag = true;
+  }
 }
 					</code></pre>
 				
@@ -315,7 +309,7 @@ gulp.task('images', () => {
 
 				<section>
 					<h2>FOIT</h2>
-					<p>By default <code>@font-face</code> has a flash of invisible text of 3 seconds. Older -webkit- browsers have unlimited FOIT. So, if your font doesn't load, your users get nothing. </p>
+					<p>By default <code>@font-face</code> has a flash of invisible text of up to 3 seconds while your fonts load. On older -webkit- browsers it's unlimited. So, if your font doesn't load, your users get nothing. </p>
 <!-- 					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> -->
 				</section>
 
@@ -699,6 +693,15 @@ self.addEventListener('activate', (event) => {
           </h2>
           <img alt="" src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-11%20at%203.36.45%20PM.png?1505162899451">
         </section>
+        <section>
+        <h2>
+          Check the network
+          </h2>
+          <p>
+            Identify which resources are causing hangups
+          </p>
+          <img alt="" src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-12%20at%203.13.50%20PM.png?1505247298435">
+        </section>
         
         <section>
         <section>
@@ -714,13 +717,90 @@ self.addEventListener('activate', (event) => {
             <img alt="" src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-11%20at%204.19.01%20PM.png?1505164821765">
           </section>
         </section>
-
+        
+        	<section>
+          <h2>
+             A fantastic resource
+          </h2>
+					<a href="https://whatdoesmysitecost.com/" data-preview-link>What does my site cost?</a>
+				</section>
+        <section>
+            <h2>
+          Jeez, this is a lot...
+        </h2>
+        <h3>
+          I mean, why even do this? After all, 
+        </h3>
+        </section>
+        <section>
+        <h4>
+          Performance is hard.
+          </h4>
+        </section>
+        <section>
+        <h2>
+          First of all, you might be scaring people to death
+          </h2>
+          <img alt="" src="https://pbs.twimg.com/media/C78paWQV4AAU3v0.jpg">
+        </section>
+      <section>
+        <h4>
+          But also, for your stakeholders
+        </h4>
+        <h2>
+          Performance === 💸💸💸
+        </h2>
+        </section>
+        <section>
+        <h2>
+          Users and consumers don't want to wait
+          </h2>
+          <p>
+            A recent report from Google subsidiary DoubleClick found 53% of mobile users abandon sites that take longer than 3 seconds to load.
+          </p>
+        </section>
+        <section>
+        <h2>
+          This means performance means increased conversion
+          </h2>
+          <hr>
+          <section>
+          <h3>
+            Walmart saw up to a 2% increase in conversions for every 1 second of improvement in load time. Every 100ms improvment also resulted in up to a 1% increase in revenue.
+            </h3>
+          </section>
+          <section>
+          <h3>
+            The Obama for America site improved performance by 60% and saw a corresponding increase in conversions of 14%.
+            </h3>
+          </section>
+          <section>
+          <h3>
+            Rebuilding Pinterest pages for performance resulted in a 40% decrease in wait time, a 15% increase in SEO traffic and a 15% increase in conversion rate to signup.</h3>
+          </section>
+          <section>
+          <h3>
+            There are countless examples. Go to <a href="http://wpostats.com">WPO Stats</a> if you need to convince the powers that be.
+            </h3>
+          </section>
+        </section>
+        <section>
+        <h2>
+          So now that we're 💪🏼 with 🛠 we need to make blazing fast sites..⚡️⚡️
+          </h2>
+        </section>
+        <section>
+        <!--go forth and spread lightning gif-->
+        </section>
 				<section style="text-align: left;">
 					<h1>THANK YOU</h1>
 					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+						- <a href="https://glen-purchase.glitch.me">https://glen-purchase.glitch.me</a> <br>
+						- <a href="https://github.com/mattJamesMedia/rideTheLightningSlide">Source code on Github</a>
 					</p>
+          <p>
+            <sup>✨</sup>Made with love, <a href="https://glitch.com">Glitch</a> and <a href="https://github.com/hakimel/reveal.js">reveal.js</a><sup>✨</sup>
+          </p>
 				</section>
 
 			</div>
