@@ -35,6 +35,9 @@ f<!doctype html>
       .reveal sup {
         font-size: .5em;
       }
+      .reveal pre {
+        font-size: .6em;
+      }
     </style>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -54,7 +57,7 @@ f<!doctype html>
 					<h1>Hi there.</h1>
 					<h3>My name is Matt James</h3>
 					<p>
-						<small><a href="http://mattjamesmedia.com">Matt James</a> / <a href="http://twitter.com/hakimel">@mattFrankJames</a></small>
+						<a href="http://mattjamesmedia.com">Matt James</a> / <a href="http://twitter.com/hakimel">@mattFrankJames</a>
 					</p>
 				</section>
 
@@ -70,7 +73,7 @@ f<!doctype html>
 				</section>
 
 				<!-- Example of nested vertical slides -->
-				<section data-background="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2Fexplosion-animated-gif-1.gif?1502742887558">
+				<section> 
           <h2>
              Let's Talk about Performance!!
           </h2>
@@ -95,7 +98,7 @@ f<!doctype html>
 
 				<section>
 					<h2>What the hell is in there!?</h2>
-					<img src="http://chart.googleapis.com/chart?chs=400x225&cht=p&chco=007099&chd=t:1731,27,60,350,98,726,14&chds=0,1731&chdlp=b&chdl=total%203061%20kB&chl=Images+-+1731+kB%7CHTML+-+27+kB%7CStylesheets+-+60+kB%7CScripts+-+350+kB%7CFonts+-+98+kB%7CVideo+-+726+kB%7COther+-+14+kB&chma=|5&chtt=Average+Bytes+per+Page+by+Content+Type">
+					<img style="width: 70%" src="http://chart.googleapis.com/chart?chs=400x225&cht=p&chco=007099&chd=t:1731,27,60,350,98,726,14&chds=0,1731&chdlp=b&chdl=total%203061%20kB&chl=Images+-+1731+kB%7CHTML+-+27+kB%7CStylesheets+-+60+kB%7CScripts+-+350+kB%7CFonts+-+98+kB%7CVideo+-+726+kB%7COther+-+14+kB&chma=|5&chtt=Average+Bytes+per+Page+by+Content+Type">
 				</section>
 
 				<section>
@@ -103,7 +106,7 @@ f<!doctype html>
 					<p>
 						From 2013 to 2015, the percentage of people forgoing broadband and relying solely on mobile nearly doubled across all incomes.
 					</p>
-          <a href="http://www.pewinternet.org/2015/12/21/home-broadband-2015/pi-2015-10-21_broadband2015-00/"><img width="420" height="415" src="http://assets.pewresearch.org/wp-content/uploads/sites/14/2015/12/PI-2015-10-21_broadband2015-00.png" class="attachment-large size-large" alt="" /></a>
+          <a href="http://www.pewinternet.org/2015/12/21/home-broadband-2015/pi-2015-10-21_broadband2015-00/"><img style="width: 50%; height: auto" src="http://assets.pewresearch.org/wp-content/uploads/sites/14/2015/12/PI-2015-10-21_broadband2015-00.png" class="attachment-large size-large" alt="" /></a>
 				</section>
 
 				<section>
@@ -140,8 +143,8 @@ f<!doctype html>
         </section>
 			
 
-				<section data-background="https://media.giphy.com/media/bZp3Ak3yxEyxG/giphy.gif">
-					<h2 style="text-shadow: 0px 6px 20px black;">
+				<section data-background="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2Fgiphy-downsized.gif?1506560956608">
+					<h2 style="background: black; padding: 1rem;">
             So, what are we going to do?!
           </h2>
 				</section>
@@ -153,20 +156,22 @@ f<!doctype html>
 					</p>
 					
 				</section>
-        <section data-background="https://media.giphy.com/media/qmcZymbr1WNeU/giphy.gif">
-          <h2 style="text-shadow: 0px 6px 20px black;">
+        <section data-background="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2Fcan.gif?1506561335502">
+          <h2 style="background: black; padding: 1rem;">
             Let's squeeze 'em down!
           </h2>
         </section>
         <section>
           <h2>
-            Do you even need that on every device?
+            Do you even need that on every&nbsp;device?
           </h2>
         </section>
 				<section>
 					<h2>Create and Lazy Load the Image</h2>
           
 					<pre><code class="hljs" data-trim contenteditable>
+<div class="heroImg" data-src="/path/to/img"></div></code></pre>
+<pre><code class="hljs" data-trim contenteditable>
 function insertImg() {
   const bannerImg = document.querySelectorAll('.heroImg');
   if (window.innerWidth >= 750 && (bannerImg.length > 0) && heroFlag === false) {
@@ -240,7 +245,7 @@ gulp.task('images', () =>
 
 				<section>
         <h2>
-          If you want to take it to the next level..
+          If you want to take it to the next&nbsp;level..
           </h2>
 				</section>
 
@@ -269,12 +274,8 @@ gulp.task('images', () => {
         rename: { suffix: '-original' },
       }]
     }, {
-      // Global configuration for all images
-      // The output quality for JPEG, WebP and TIFF output formats
       quality: 70,
-      // Use progressive (interlace) scan for JPEG and PNG output
       progressive: true,
-      // Strip all metadata
       withMetadata: false,
     }))
     .pipe(gulp.dest('dist'));
@@ -286,7 +287,7 @@ gulp.task('images', () => {
 				<section>
 					<h2>Responsive Images!</h2>
 					<p>
-						Drop those bad boys in the <code>srcset</code> atttribute and let the browser decide!
+						Drop those bad boys in the <code>srcset</code> atttribute and let the browser&nbsp;decide!
 					</p>
           <pre>
             <code class="hljs" data-trim contenteditable>
@@ -338,7 +339,7 @@ gulp.task('images', () => {
           </h2>
           <img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-07%20at%2012.48.41%20PM.png?1504806603518" style="width: 65%;">
         </section>
-        <section data-background="https://media.giphy.com/media/oGEXwxKpZjpXW/giphy.gif">
+        <section data-background="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2Fsparkle.gif?1506561336927">
           <h2 style="text-shadow: 0px 6px 20px black;">
             It's Progressive Enhancement<sup>tm</sup>!
             <!--put some kind of magic gif in here-->
@@ -402,8 +403,8 @@ Promise.all([fontA.load(), fontB.load()]).then(() => {
           The low hanging fruit 
           </h2>
 						
-						<p class="fragment fade-right"><code>async</code> and <code>defer</code> your JS file</p>
-						<p class="fragment fade-left">Add <code>link rel="preload"</code> to your CSS</p>
+						<p class="fragment fade-right"><code style="color: #c678dd;">async</code> and <code style="color: #98c379">defer</code> your JS file</p>
+						<p class="fragment fade-left">Add <code><span style="color: #d19a66">link</span> rel=<span style="color: #e06c75;">"preload"</span></code> to your CSS</p>
             <p class="fragment fade-right">
               Minify and concatenate your scripts and stylesheets
           </p>
@@ -527,7 +528,7 @@ gulp.task('compress', () =>
         </section>
         <section>
          <h2>
-           You can drop your URL here and generate above the fold styles. Or,
+           You can drop your URL here and generate above the fold&nbsp;styles.&nbsp;Or,
            <img src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-10%20at%208.33.33%20AM.png?1505611493486" alt="">
           </h2>
         </section>
@@ -558,7 +559,7 @@ const critical = require('critical');
           Now asynchronously load non-critical CSS
           </h2>
           <p>
-            Use <code>link rel="preload"</code> in conjunction with this polyfill
+            Use <code><span style="color: #d19a66">link</span> rel=<span style="color: #e06c75;">"preload"</span></code> in conjunction with the loadCSS polyfill
           </p>
           <img alt="" src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-08%20at%203.12.15%20PM.png?1504901601689">
         </section>
@@ -581,16 +582,16 @@ const critical = require('critical');
           </h2>
                   <img alt="" src="https://codelabs.developers.google.com/codelabs/polymer-offline-weather/img/1fbdd59d923c44cb.png">
         </section>
-        <section data-background="https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif">
-          <h2 style="text-shadow: 0px 6px 20px black;">
+        <section data-background="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2Fmagic.gif?1506561336688">
+          <h2 style="background: black; padding: 1rem;">
           Service Workers are magic!
         </h2>
-          <h3>
+          <h3 style="background: black; padding: 1rem;">
             You control:
           </h3>
-          <p class="fragment fade-right">Which assets to cache (static, dynamic, etc)</p>
-						<p class="fragment fade-left">How to handle page requests</p>
-            <p class="fragment fade-right">
+          <p style="background: black; padding: 1em;" class="fragment fade-right">Which assets to cache (static, dynamic, etc)</p>
+						<p style="background: black; padding: 1em;" class="fragment fade-left">How to handle page requests</p>
+            <p style="background: black; padding: 1em;" class="fragment fade-right">
               The offline experience
           </p>
         </section>
@@ -654,7 +655,7 @@ self.addEventListener('activate', (event) => {
         </section>
         <section>
         <h2>
-          Or use a tool:
+          Or use a tool like Workbox
           </h2>
           <img style="width: 60%;" alt="" src="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2FScreen%20Shot%202017-09-11%20at%203.33.02%20PM.png?1505162899401">
         </section>
@@ -736,9 +737,9 @@ self.addEventListener('activate', (event) => {
         </h3>
         </section>
         <section>
-        <h4>
+        <h2>
           Performance is hard.
-          </h4>
+          </h2>
         </section>
         <section>
         <h2>
@@ -792,9 +793,9 @@ self.addEventListener('activate', (event) => {
           So now that we're 💪🏼 with 🛠 we need to make blazing fast sites..⚡️⚡️
           </h2>
         </section>
-        <section data-background="https://media.giphy.com/media/d2Z4rTi11c9LRita/giphy.gif">
+        <section data-background="https://cdn.glitch.com/fe55989a-e30c-4e0d-b476-156642efaff4%2Frocky.gif?1506561337254">
         <h2 style="text-shadow: 0px 6px 20px black;">
-           ⚡️Go Forth and spread the Lightning!⚡️
+           ⚡️ Go Forth and Ride the Lightning! ⚡️
           </h2>
         </section>
 				<section style="text-align: left;">
